@@ -5,7 +5,7 @@ provider "aws" {
 
 #AWS Instance
 
-resource "aws_instance" "web" {
+resource "aws_instance" "web-server" {
      ami = data.aws_ami.windows.id
      instance_type = "t2.micro"
 
