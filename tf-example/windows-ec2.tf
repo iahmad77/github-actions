@@ -12,6 +12,9 @@ resource "aws_instance" "web_server" {
 lifecycle {
      ignore_changes = [ami]
      }
+tags = {
+    Name = var.ec2_name
+  }
 
  }
 
