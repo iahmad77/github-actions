@@ -14,12 +14,24 @@ tags = {
 
  }
 
-# Get latest Windows Server 2022 AMI
-data "aws_ami" "windows-2022" {
-  most_recent = true
-  owners      = ["007666661890"]
-  filter {
-    name   = "name"
-    values = ["Windows_Server-2022-English-Full-Base*"]
-  }
-}
+#AMI Filter for Windows Server 2019 Base
+
+data "aws_ami" "windows" {
+     most_recent = true
+
+     filter {
+        name   = "name"
+        values = ["Windows_Server-2019-English-Full-Base-*"]
+
+ }
+
+     filter {
+       name   = "virtualization-type"
+       values = ["hvm"]
+
+ }
+
+     owners = ["007666661890"] # Canonical
+
+ }
+
