@@ -23,18 +23,18 @@ tags = {
 data "aws_ami" "windows" {
      most_recent = true
 
-     filter {
+filter {
         name   = "name"
         values = ["Windows_Server-2019-English-Full-Base-*"]
 
  }
 
-     filter {
+filter {
        name   = "virtualization-type"
        values = ["hvm"]
 
  }
 
-     owners = ["007666661890"] # Canonical
+owners = ["007666661890"] # Canonical
 
  }
